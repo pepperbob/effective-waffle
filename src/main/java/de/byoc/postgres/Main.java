@@ -1,7 +1,5 @@
 package de.byoc.postgres;
 
-import org.json.JSONObject;
-
 import javax.persistence.Persistence;
 import java.util.UUID;
 
@@ -20,6 +18,12 @@ public class Main {
 
     for (int i = 0; i < iter; i++) {
       em.persist(new JsonInteger(i));
+      if (i % 20 == 0)
+        System.out.println(i);
+    }
+
+    for (int i = 0; i < iter; i++) {
+      em.persist(new SpecialJson(UUID.randomUUID()));
       if (i % 20 == 0)
         System.out.println(i);
     }

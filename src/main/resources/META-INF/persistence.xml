@@ -5,6 +5,7 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>de.byoc.postgres.JsonInteger</class>
         <class>de.byoc.postgres.JsonUuid</class>
+        <class>de.byoc.postgres.SpecialJson</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
